@@ -49,3 +49,54 @@
 <script src="{% static 'js/survey.js' %}"></script>
 
 {% endblock %}
+<!--% extends 'base.html' %}-->
+<!--{% block content %}-->
+<!--{% load static %}-->
+<!--<link rel="stylesheet" href="{% static 'css/add_survey.css' %}">-->
+<!--<div class="container-fluid">-->
+<!--    <div class="row">-->
+<!--        <div class="col-xl-12 col-lg-12">-->
+<!--            <div class="full-width auto-height">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-xl-12 col-lg-6">-->
+<!--                        <div class="survey-card">-->
+<!--                            <div class="survey-card-header d-flex flex-row align-items-center justify-content-between">-->
+<!--                                <h6 class="survey-title m-0 font-weight-bold">Create Survey</h6>-->
+<!--                            </div>-->
+<!--                            <div class="card-body">-->
+<!--                                <div class="container mt-5">-->
+<!--                                    <form action="/create_survey/" method="POST" class="p-4">-->
+<!--                                        {% csrf_token %}-->
+<!--                                        <div class="mb-3">-->
+<!--                                            <label for="title" class="form-label">Survey Title:</label>-->
+<!--                                            <input type="text" id="title" name="title" class="form-control" required maxlength="128" placeholder="Enter survey title">-->
+<!--                                        </div>-->
+<!--                                        <div class="mb-3">-->
+<!--                                            <label for="description" class="form-label">Survey Description:</label>-->
+<!--                                            <textarea id="description" name="description" class="form-control" rows="4" placeholder="Enter survey description"></textarea>-->
+<!--                                        </div>-->
+<!--                                        <div class="mb-3">-->
+<!--                                            <label for="startdate" class="form-label">Start Time:</label>-->
+<!--                                            <input type="datetime-local" id="startdate" name="startdate" class="form-control" lang="en" required>-->
+<!--                                        </div>-->
+<!--                                        <div class="mb-3">-->
+<!--                                            <label for="enddate" class="form-label">End Time:</label>-->
+<!--                                            <input type="datetime-local" id="enddate" name="enddate" class="form-control" lang="en" required>-->
+<!--                                        </div>-->
+<!--                                        <div id="questions-container"></div>-->
+<!--                                        <button type="button" onclick="addQuestion()" class="btn btn-secondary">Add Question</button>-->
+<!--                                        <button type="submit" class="btn btn-primary w-100 submit-survey">Submit Survey</button>-->
+<!--                                    </form>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script src="{% static 'js/survey.js' %}"></script>-->
+
+<!--{% endblock %}-->

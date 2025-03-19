@@ -29,7 +29,7 @@ from django.core.exceptions import ValidationError
 from django.db.models import Q, Count
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
-# 登录表单
+
 
 
 class LoginForm(forms.Form):
@@ -57,7 +57,7 @@ class RegisterForm(forms.Form):
             attrs={'class': "form-control", 'placeholder': "Enter your username"}),
         max_length=16,
         error_messages={
-            'required': 'Username is required',  # 自定义错误消息
+            'required': 'Username is required',
             'max_length': 'Username cannot be longer than 16 characters'
         }
     )
@@ -67,8 +67,8 @@ class RegisterForm(forms.Form):
             attrs={'class': "form-control", 'placeholder': "Enter your email"}),
         max_length=20,
         error_messages={
-            'required': 'Email is required',  # 自定义错误消息
-            'invalid': 'Please enter a valid email address',  # 邮箱格式错误时的提示
+            'required': 'Email is required',
+            'invalid': 'Please enter a valid email address',
             'max_length': 'Email cannot be longer than 20 characters'
         }
     )
@@ -77,7 +77,7 @@ class RegisterForm(forms.Form):
         widget=forms.PasswordInput(
             attrs={'class': "form-control", 'placeholder': "Enter your password"}),
         error_messages={
-            'required': 'Password is required',  # 自定义错误消息
+            'required': 'Password is required',
         }
     )
     password1 = forms.CharField(
@@ -85,14 +85,14 @@ class RegisterForm(forms.Form):
         widget=forms.PasswordInput(
             attrs={'class': "form-control", 'placeholder': "Confirm your password"}),
         error_messages={
-            'required': 'Please confirm your password',  # 自定义错误消息
+            'required': 'Please confirm your password',
         }
     )
 
     def clean_name(self):
         name = self.cleaned_data.get('name')
         if User.objects.filter(name=name).exists():
-            raise ValidationError("This username is already registered")  # 英文提示
+            raise ValidationError("This username is already registered")
         return name
 
     def clean(self):
@@ -101,11 +101,10 @@ class RegisterForm(forms.Form):
         password1 = cleaned_data.get('password1')
 
         if password and password1 and password != password1:
-            raise ValidationError("Passwords do not match")  # 英文提示
+            raise ValidationError("Passwords do not match")
 
         return cleaned_data
 
-# 用户登录视图
 
 
 def login(request):
@@ -133,7 +132,7 @@ def login(request):
 
     return redirect('/create_survey/')
 
-# 注销，退出登录
+
 
 
 def logout(request):
@@ -164,9 +163,8 @@ def res(request):
             error = "Please fill in all fields correctly."  # 错误信息传递到模板
             return render(request, "res.html", {"form": form, "error": error})
 
-    return render(request, "res.html", {"error": None})  # 没有错误时返回空的错误消息
+    return render(request, "res.html", {"error": None})
 
-# 修改密码
 
 def change_password(request):
     if request.method == "POST":
@@ -192,55 +190,6 @@ def change_password(request):
                     messages.error(request, "Incorrect old password")
 
     return render(request, "change.html")
-
-
-
-
-# from django.shortcuts import render, redirect
-# from .models import Survey, Question, Option
-
-# def create_survey(request):
-#     username = request.info_dict.get("name", "")
-#     user = User.objects.filter(name=username).first()
-#     if request.method == "POST":
-#         title = request.POST.get("title")
-#         description = request.POST.get("description")
-#         createby = user
-
-#         survey = Survey.objects.create(
-#             title=title,
-#             description=description,
-#             createby=createby
-#         )
-
-
-#         questions = request.POST.getlist("question_text[]")
-#         question_types = request.POST.getlist("question_type[]")
-#         is_required_list = request.POST.getlist("is_required[]")
-#         options_data = request.POST.getlist("options[]")
-
-#         for index, question_text in enumerate(questions):
-#             question = Question.objects.create(
-#                 survey=survey,
-#                 type=question_types[index],
-#                 order=index + 1,
-#                 isrequired=is_required_list[index],
-#                 question_text=question_text,
-#             )
-
-#             # Add options if it's a choice question (单选题 or 多选题)
-#             if question.type in ['0', '1']:  # 单选题 or 多选题
-#                 options_for_question = options_data[index].split('|')  # Delimited by '|' in the form
-#                 for option_order, option_text in enumerate(options_for_question):
-#                     Option.objects.create(
-#                         question=question,
-#                         optiontext=option_text,
-#                         order=option_order + 1
-#                     )
-
-#         return redirect("home")
-
-#     return render(request, "create_survey.html")
 
 
 def create_survey(request):
@@ -577,8 +526,6 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.pagesizes import letter
 
-# 注册中文字体
-pdfmetrics.registerFont(TTFont('SimSun', 'simsun.ttc'))  # SimSun 是常用的中文字体
 
 def generate_pdf_from_statistics(survey, statistics, completion_rate):
     """Helper function: Write statistics data to PDF"""

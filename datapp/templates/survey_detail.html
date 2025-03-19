@@ -20,10 +20,6 @@
                   <div class="survey-info">
                     <div>Completion Rate: 100%</div>
                     <div>End Time: {{ survey.enddate|date:'Y-m-d' }}</div>
-
-                    <a href="{% url 'statistics_pdf' survey.id %}" class="btn btn-primary">
-                      Download PDF
-                    </a>
                   
                   </div>
               
