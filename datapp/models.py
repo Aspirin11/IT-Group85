@@ -7,15 +7,12 @@ class User(models.Model):
     email = models.EmailField(verbose_name="邮箱", max_length=64)
     
     def save(self, *args, **kwargs):
-        # 如果密码不是加密状态，则加密密码
         if not self.password.startswith('pbkdf2_'):
             self.password = make_password(self.password)
         super().save(*args, **kwargs)
 
     def check_password(self, raw_password):
-        """
-        校验用户输入的密码是否正确
-        """
+
         return check_password(raw_password, self.password)
 
     def __str__(self):

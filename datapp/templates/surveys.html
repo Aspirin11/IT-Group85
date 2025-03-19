@@ -2,18 +2,11 @@
 {% load custom_filters %}
 {% block content %}
 {% load static %}
-
-
-
 <div class="container-fluid">
 
     <div class="row">
         <div class="col-xl-12 col-lg-12">
             <div>
-
-
-
-
                 <div class="row">
                     {% for survey in surveys %}
                     <div class="col-md-4 mb-4">
@@ -35,8 +28,6 @@
                     </div>
                     {% endfor %}
                 </div>
-
-
                 </div>
             </div>
         </div>
@@ -45,15 +36,9 @@
     {% if messages %}
     {% for message in messages %}
     <script>
-
             alert('{{ message }}');
-
-
     </script>
     {% endfor %}
 {% endif %}
-
-
-
 
 {% endblock %}

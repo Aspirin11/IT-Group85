@@ -35,8 +35,7 @@ button {
     border: none;
     border-radius: 4px;
     background-color: #007bff;
-    /* Bootstrap primary blue */
-    color: #ffffff;
+    color: #f0f0f0;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -52,7 +51,7 @@ table {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
-    background-color: #ffffff;
+    background-color: #f0f0f0;
 }
 
 th,
@@ -81,8 +80,6 @@ th {
     margin-bottom: 10px;
 }
 
-
-/* 2025.03.19 add*/
 
 .cardqd {
     width: 100%;

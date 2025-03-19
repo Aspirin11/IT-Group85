@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
-
 {% block content %}
 {% load static %}
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Survey Analysis Dashboard</h1>
 </div>
 
-<!-- Content Row -->
 <div class="row">
     <!-- Survey Response Chart -->
     <div class="col-xl-8 col-lg-7">
@@ -52,4 +50,5 @@
 </script>
 
 <script src="{% static 'js/survey_analysis.js' %}"></script>
+
 {% endblock %}
