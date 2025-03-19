@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/add_survey.css' %}">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12">
+            <div style="width:100%;height:auto;">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-6">
+                        <div class="card shadow mb-4" style="background-color: #f8f9fa;">
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between" style="background-color: #666;">
+                                <h6 class="m-0 font-weight-bold" style="color: #fff;">Create Survey</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="container mt-5">
+                                    <form action="/create_survey/" method="POST" class="p-4">
+                                        {% csrf_token %}
+                                        <div class="mb-3">
+                                            <label for="title" class="form-label">Survey Title:</label>
+                                            <input type="text" id="title" name="title" class="form-control" required maxlength="128" placeholder="Enter survey title">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="description" class="form-label">Survey Description:</label>
+                                            <textarea id="description" name="description" class="form-control" rows="4" placeholder="Enter survey description"></textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="startdate" class="form-label">Start Time:</label>
+                                            <input type="datetime-local" id="startdate" name="startdate" class="form-control" lang="en">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="enddate" class="form-label">End Time:</label>
+                                            <input type="datetime-local" id="enddate" name="enddate" class="form-control" lang="en">
+                                        </div>
+                                        <div id="questions-container"></div>
+                                        <button type="button" onclick="addQuestion()" class="btn btn-secondary">Add Question</button>
+                                        <button type="submit" class="btn btn-primary w-100" style="background-color: #666; border-color: #666;">Submit Survey</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function addQuestion() {
+    const container = document.getElementById('questions-container');
+    const newQuestionHTML = `
+        <div class="question-item border p-3 mb-2" style="background-color: #f8f9fa;">
+            <input type="hidden" name="kept_question_ids[]" value="">
+            <input type="text" name="question_text[]" class="form-control mb-2" placeholder="Enter question content">
+            <select name="question_type[]" class="form-select mb-2">
+                <option value="0">Single Choice</option>
+                <option value="1">Multiple Choice</option>
+                <option value="2">Text Question</option>
+            </select>
+            <select name="is_required[]" class="form-select mb-2">
+                <option value="0">Optional</option>
+                <option value="1">Required</option>
+            </select>
+            <input type="text" name="options[]" class="form-control mb-2" placeholder="Options separated by | (for single/multiple choice only)">
+            <button type="button" class="btn btn-danger" onclick="removeQuestion(this)">Delete Question</button>
+        </div>
+    `;
+    container.insertAdjacentHTML('beforeend', newQuestionHTML);
+}
+
+function removeQuestion(button) {
+    button.closest('.question-item').remove();
+}
+</script>
+
+{% endblock %}
+
+

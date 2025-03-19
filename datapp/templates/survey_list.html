@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+{% block content %}
+{% load static %}
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12">
+            <div>
+
+
+
+
+                <div class="row">
+                    <div class="col-xl-12 col-lg-6">
+                        <div class="card shadow mb-4">
+                            <div
+                                class="card-header py-3 d-flex flex-row align-items-center justify-content-between bg-secondary">
+                                <h6 class="m-0 font-weight-bold text-white">Survey List</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body bg-light">
+
+
+
+
+
+                    <table class="table table-striped table-bordered">
+                        <thead class="bg-secondary text-white">
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Creator</th>
+                                <th>Created Time</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for survey in surveys %}
+                            <tr>
+                                <td>{{ survey.id }}</td>
+                                <td>{{ survey.title }}</td>
+                                <td>{{ survey.createby.name }}</td>
+                                <td>{{ survey.dateceated|date:"M d, Y H:i"|chinese_month_to_english }}</td>
+                                <td>{{ survey.get_status_display }}</td>
+                                <td>
+                                    <a href="{% url 'survey_detail' survey.id %}" class="btn btn-secondary btn-sm">View</a>
+                                    <a href="{% url 'edit_survey' survey.id %}" class="btn btn-secondary btn-sm">Edit</a>
+                                    <a href="{% url 'delete_survey' survey.id %}" onclick="return confirm('Are you sure you want to delete?');" class="btn btn-secondary btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

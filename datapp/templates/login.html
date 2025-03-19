@@ -1,0 +1,56 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up & Log In</title>
+  <script href="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <link rel="stylesheet" href="/static/bootstrap-3.4.1/dist/css/bootstrap.css">
+  <!-- 引用外部 CSS 文件 -->
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+
+<body>
+  <div id="alertBox" class="alert alert-danger" role="alert"></div>
+  <div class="header">
+    <span class="emoji">☺</span>Begin Your Survey Journey
+  </div>
+  <div class="container">
+    <div class="content-left">
+      <h1>Insights Begin with Surveys</h1>
+      <p class="description">Welcome to our online survey platform, where every question opens a window into understanding user needs.</p>
+      <p class="description">With intuitive design and powerful analytics, we make it easy to conduct both corporate and academic research.</p>
+      <p class="description">Create your survey today and start your journey towards data-driven decisions!</p>
+    </div>
+    <div class="content-right">
+      <div class="login-box">
+        <h3>Sign In</h3>
+        <div class="quick-signup">Quick Sign In</div>
+        <form method="post" action="/login/" novalidate>
+          {% csrf_token %}
+          <div class="form-group">
+            {{ form.name }}
+            <span class="error-message">{{ form.name.errors.0 }}</span>
+          </div>
+          <div class="form-group">
+            {{ form.password }}
+            <span class="error-message">{{ form.password.errors.0 }}</span>
+          </div>
+          <button type="submit" class="btn btn-success">Log In</button>
+          <div class="error-message">{{ error }}</div>
+        </form>
+        <div>
+          <a href="/res/">Don't have an account? Sign up now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+
+
+
+

@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.header {
+    height: 30px;
+    border-bottom: 1px solid #ededed;
+}
+
+.header p,
+.header ul li {
+    margin: 0 20px;
+    font-size: 12px;
+}
+
+.header p {
+    line-height: 30px;
+    float: left;
+    color: #7d7d7d;
+}
+
+.header p a {
+    color: #7d7d7d;
+    margin-left: 12px;
+}
+
+.header p:hover,
+.foot-top dd a:hover,
+.foot-bottom span a:hover {
+    color: #008cd6;
+}
+
+
+
+
+/* 头部栏下半部 */
+.header-down {
+    height: 120px;
+}
+
+.header-down img {
+    float: left;
+    margin-top: 12px;
+}
+
+.search {
+    margin-top: 44px;
+    margin-right: 12px;
+    float: right;
+    width: 528px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search>form {
+    display: flex;
+    width: 100%;
+}
+
+.search>form>input {
+    font-size: 14px;
+    padding-left: 10px;
+    color: #333;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    border-radius: 5px 0 0 5px;
+}
+
+.search select {
+    border: none;
+    color: #65696b;
+    font-size: 14px;
+    padding-left: 10px;
+    background-color: #e9ecef;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-text {
+    flex-grow: 1;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.header-button {
+    width: 93px;
+    height: 40px;
+}
+
+.header-button input {
+    padding-left: 8px;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: url(/static/imgs/search_03.gif) no-repeat center left 10px;
+    background-color: #007bff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+
+
+.banner {
+    overflow: hidden;
+    height: 300px;
+    background: url(/static/imgs//bpic.jpg) no-repeat;
+    background-size: 100% 300px;
+}
+
+.cont {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+
+
+
+/* 底部栏 */
+footer {
+    background-color: #c7c7c7;
+    padding: 10px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.foot-bottom {
+    text-align: center;
+    padding: 10px 0;
+
+}
+
+
+
+
+/* 景点介绍 */
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container1 {
+
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+.grid_9 {
+    width: 100%;
+    padding: 20px;
+}
+
+.product-grid {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    justify-content: space-between;
+}
+
+
+.product-card {
+
+    background-color: #fff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    width: calc(20% - 20px);
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+.product-card img {
+
+    max-width: 100%;
+
+    height: auto;
+
+    border-bottom: 1px solid #ddd;
+
+    margin-bottom: 10px;
+}
+
+
+.product-card h2 {
+
+    font-size: 1.2em;
+
+    margin: 10px 0;
+}
+
+
+.product-card p {
+
+    margin: 5px 0;
+
+    color: #555;
+}

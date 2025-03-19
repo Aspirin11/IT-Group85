@@ -1,0 +1,1156 @@
+2022-09-17 17:22:52.437 INFO  org.spiderflow.SpiderApplication - Starting SpiderApplication on LAPTOP-JSOKR72D with PID 41260 (D:\spider-flow-0.5.0\spider-flow-web\target\classes started by 13928 in D:\data structure\代码\algorithm)
+2022-09-17 17:22:52.445 INFO  org.spiderflow.SpiderApplication - No active profile set, falling back to default profiles: default
+2022-09-17 17:22:52.473 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@44b3606b: startup date [Sat Sep 17 17:22:52 CST 2022]; root of context hierarchy
+2022-09-17 17:22:53.741 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2022-09-17 17:22:53.749 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2022-09-17 17:22:53.757 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-17 17:22:53.757 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.35
+2022-09-17 17:22:53.760 INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\jdk\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\java web\apache-maven-3.8.5\bin;;D:\微信web开发者工具\dll;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\13928\AppData\Local\Microsoft\WindowsApps;;D:\WebStorm 2022.2.1\bin;;D:\CLion 2022.1.3\bin;;.]
+2022-09-17 17:22:53.845 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-17 17:22:53.845 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1376 ms
+2022-09-17 17:22:53.894 INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2022-09-17 17:22:53.897 INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-09-17 17:22:53.897 INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-09-17 17:22:53.897 INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2022-09-17 17:22:53.897 INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2022-09-17 17:22:53.950 INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-17 17:22:54.004 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-17 17:22:54.243 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration - mapper[org.spiderflow.core.mapper.SpiderFlowMapper.resetNextExecuteTime] is ignored, because it exists, maybe from xml file
+2022-09-17 17:22:54.615 INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2022-09-17 17:22:54.620 INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-17 17:22:54.621 INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2022-09-17 17:22:54.621 INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2022-09-17 17:22:54.621 INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-09-17 17:22:54.621 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-17 17:22:54.621 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2022-09-17 17:22:54.621 INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@71166348
+2022-09-17 17:22:54.803 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@44b3606b: startup date [Sat Sep 17 17:22:52 CST 2022]; root of context hierarchy
+2022-09-17 17:22:54.844 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/datasource/remove]}" onto public void org.spiderflow.controller.DataSourceController.remove(java.lang.String)
+2022-09-17 17:22:54.844 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/datasource/get]}" onto public org.spiderflow.core.model.DataSource org.spiderflow.controller.DataSourceController.get(java.lang.String)
+2022-09-17 17:22:54.845 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/datasource/list]}" onto public com.baomidou.mybatisplus.core.metadata.IPage<org.spiderflow.core.model.DataSource> org.spiderflow.controller.DataSourceController.list(java.lang.Integer,java.lang.Integer)
+2022-09-17 17:22:54.845 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/datasource/test]}" onto public org.spiderflow.model.JsonBean<java.lang.Void> org.spiderflow.controller.DataSourceController.test(org.spiderflow.core.model.DataSource)
+2022-09-17 17:22:54.845 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/datasource/save]}" onto public java.lang.String org.spiderflow.controller.DataSourceController.save(org.spiderflow.core.model.DataSource)
+2022-09-17 17:22:54.845 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/datasource/all]}" onto public java.util.List<org.spiderflow.core.model.DataSource> org.spiderflow.controller.DataSourceController.all()
+2022-09-17 17:22:54.847 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/flowNotice/save]}" onto public org.spiderflow.model.JsonBean<org.spiderflow.core.model.FlowNotice> org.spiderflow.controller.FlowNoticeController.save(org.spiderflow.core.model.FlowNotice)
+2022-09-17 17:22:54.847 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/flowNotice/find]}" onto public org.spiderflow.model.JsonBean<org.spiderflow.core.model.FlowNotice> org.spiderflow.controller.FlowNoticeController.find(java.lang.String)
+2022-09-17 17:22:54.847 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/flowNotice/getNoticeWay]}" onto public org.spiderflow.model.JsonBean<java.util.Map<java.lang.String, java.lang.String>> org.spiderflow.controller.FlowNoticeController.getNoticeWay(java.lang.String)
+2022-09-17 17:22:54.847 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/function/remove]}" onto public void org.spiderflow.controller.FunctionController.remove(java.lang.String)
+2022-09-17 17:22:54.848 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/function/get]}" onto public org.spiderflow.core.model.Function org.spiderflow.controller.FunctionController.get(java.lang.String)
+2022-09-17 17:22:54.848 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/function/list]}" onto public com.baomidou.mybatisplus.core.metadata.IPage<org.spiderflow.core.model.Function> org.spiderflow.controller.FunctionController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2022-09-17 17:22:54.848 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/function/save]}" onto public java.lang.String org.spiderflow.controller.FunctionController.save(org.spiderflow.core.model.Function)
+2022-09-17 17:22:54.850 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/run]}" onto public void org.spiderflow.controller.SpiderFlowController.run(java.lang.String)
+2022-09-17 17:22:54.851 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/remove]}" onto public void org.spiderflow.controller.SpiderFlowController.remove(java.lang.String)
+2022-09-17 17:22:54.851 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/get]}" onto public org.spiderflow.core.model.SpiderFlow org.spiderflow.controller.SpiderFlowController.get(java.lang.String)
+2022-09-17 17:22:54.851 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/log]}" onto public org.spiderflow.model.JsonBean<java.util.List<org.spiderflow.io.Line>> org.spiderflow.controller.SpiderFlowController.log(java.lang.String,java.lang.String,java.lang.String,java.lang.Long,java.lang.Integer,java.lang.Boolean,java.lang.Boolean,java.lang.Boolean)
+2022-09-17 17:22:54.851 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/other]}" onto public java.util.List<org.spiderflow.core.model.SpiderFlow> org.spiderflow.controller.SpiderFlowController.other(java.lang.String)
+2022-09-17 17:22:54.851 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/list]}" onto public com.baomidou.mybatisplus.core.metadata.IPage<org.spiderflow.core.model.SpiderFlow> org.spiderflow.controller.SpiderFlowController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2022-09-17 17:22:54.851 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/start]}" onto public void org.spiderflow.controller.SpiderFlowController.start(java.lang.String)
+2022-09-17 17:22:54.851 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/stop]}" onto public void org.spiderflow.controller.SpiderFlowController.stop(java.lang.String)
+2022-09-17 17:22:54.852 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/save]}" onto public java.lang.String org.spiderflow.controller.SpiderFlowController.save(org.spiderflow.core.model.SpiderFlow)
+2022-09-17 17:22:54.852 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/xml]}" onto public java.lang.String org.spiderflow.controller.SpiderFlowController.xml(java.lang.String)
+2022-09-17 17:22:54.852 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/cron]}" onto public void org.spiderflow.controller.SpiderFlowController.cron(java.lang.String,java.lang.String)
+2022-09-17 17:22:54.852 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/pluginConfigs]}" onto public java.util.List<org.spiderflow.model.Plugin> org.spiderflow.controller.SpiderFlowController.pluginConfigs()
+2022-09-17 17:22:54.852 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/log/download]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.FileSystemResource> org.spiderflow.controller.SpiderFlowController.download(java.lang.String,java.lang.String)
+2022-09-17 17:22:54.852 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/grammers]}" onto public org.spiderflow.model.JsonBean<java.util.List<org.spiderflow.model.Grammer>> org.spiderflow.controller.SpiderFlowController.grammers()
+2022-09-17 17:22:54.852 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/history]}" onto public org.spiderflow.model.JsonBean<?> org.spiderflow.controller.SpiderFlowController.history(java.lang.String,java.lang.String)
+2022-09-17 17:22:54.852 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/shapes]}" onto public java.util.List<org.spiderflow.model.Shape> org.spiderflow.controller.SpiderFlowController.shapes()
+2022-09-17 17:22:54.852 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/recent5TriggerTime],methods=[GET]}" onto public java.util.List<java.lang.String> org.spiderflow.controller.SpiderFlowController.getRecent5TriggerTime(java.lang.String)
+2022-09-17 17:22:54.853 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/rest/run/{id}]}" onto public org.spiderflow.model.JsonBean<java.util.List<org.spiderflow.model.SpiderOutput>> org.spiderflow.controller.SpiderRestController.run(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+2022-09-17 17:22:54.853 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/rest/status/{taskId}]}" onto public org.spiderflow.model.JsonBean<java.lang.Integer> org.spiderflow.controller.SpiderRestController.status(java.lang.Integer)
+2022-09-17 17:22:54.853 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/rest/stop/{taskId}]}" onto public org.spiderflow.model.JsonBean<java.lang.Void> org.spiderflow.controller.SpiderRestController.stop(java.lang.Integer)
+2022-09-17 17:22:54.853 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/rest/runAsync/{id}]}" onto public org.spiderflow.model.JsonBean<java.lang.Integer> org.spiderflow.controller.SpiderRestController.runAsync(java.lang.String)
+2022-09-17 17:22:54.854 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/task/remove]}" onto public org.spiderflow.model.JsonBean<java.lang.Boolean> org.spiderflow.controller.TaskController.remove(java.lang.Integer)
+2022-09-17 17:22:54.854 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/task/list]}" onto public com.baomidou.mybatisplus.core.metadata.IPage<org.spiderflow.core.model.Task> org.spiderflow.controller.TaskController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2022-09-17 17:22:54.854 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/task/stop]}" onto public org.spiderflow.model.JsonBean<java.lang.Boolean> org.spiderflow.controller.TaskController.stop(java.lang.Integer)
+2022-09-17 17:22:54.854 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/variable/get]}" onto public org.spiderflow.model.JsonBean<T> org.spiderflow.common.CURDController.get(java.lang.String)
+2022-09-17 17:22:54.854 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/variable/list]}" onto public com.baomidou.mybatisplus.core.metadata.IPage<T> org.spiderflow.common.CURDController.list(java.lang.Integer,java.lang.Integer)
+2022-09-17 17:22:54.854 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/variable/delete]}" onto public org.spiderflow.model.JsonBean<java.lang.Boolean> org.spiderflow.common.CURDController.delete(java.lang.String)
+2022-09-17 17:22:54.855 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/variable/save]}" onto public org.spiderflow.model.JsonBean<java.lang.Boolean> org.spiderflow.common.CURDController.save(T)
+2022-09-17 17:22:54.856 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2022-09-17 17:22:54.857 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022-09-17 17:22:54.880 INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-09-17 17:22:54.880 INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-09-17 17:22:54.881 INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-09-17 17:22:54.905 INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2022-09-17 17:22:55.024 INFO  o.s.w.s.server.standard.ServerEndpointExporter - Registering @ServerEndpoint class: class org.spiderflow.websocket.WebSocketEditorServer
+2022-09-17 17:22:55.030 INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2022-09-17 17:22:55.032 INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2022-09-17 17:22:55.035 INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2022-09-17 17:22:55.038 INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2022-09-17 17:22:55.038 INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2022-09-17 17:22:55.038 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-09-17 17:22:55.046 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2022-09-17 17:22:55.054 INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2022-09-17 17:22:55.065 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2022-09-17 17:22:55.068 INFO  org.spiderflow.SpiderApplication - Started SpiderApplication in 2.88 seconds (JVM running for 3.718)
+2022-09-17 17:24:05.124 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2022-09-17 17:24:05.124 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2022-09-17 17:24:05.142 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2022-09-17 17:31:14.292 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://gitee.com/gvp/all
+2022-09-17 17:31:21.957 INFO  org.spiderflow.core.Spider - 获取循环次数10=10
+2022-09-17 17:31:21.958 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://gitee.com//actionview/av
+2022-09-17 17:31:21.958 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://gitee.com//agile-bpm/agile-bpm-basic
+2022-09-17 17:31:21.958 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://gitee.com//AirtestProject/Airtest
+2022-09-17 17:31:21.958 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://gitee.com//seagull1985/LuckyFrameClient
+2022-09-17 17:31:21.958 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://gitee.com//acl-dev/acl
+2022-09-17 17:31:21.958 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://gitee.com//anji-plus/report
+2022-09-17 17:31:21.958 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://gitee.com//openeuler/A-Tune
+2022-09-17 17:31:21.958 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://gitee.com//actframework/actframework
+2022-09-17 17:31:21.959 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 自动设置Cookie：{user_locale=zh-CN, oschina_new_user=false, gitee-session-n=ekRUVmdKdWl3M0cxdUNHYy9jL2FxbmNEMzNqbmgvTmVSODVjN0JwSWpqZEd0Nkt5Q21NQmNpT0hFbWxYV2ZYcXVyME9XS29heTFjclJaMi9QTEJJZDQ4YjV2UFFWYVVtTXk2b2pxdjlvME5WSnduSUo4b0pQTHNXN3pSaEY3NU50dlltV2RuaGNLRmw2dGQvQ1pJM0dqek1rTzhTdWcyUnhrKy9Cb3lMLzlzQUhSOEd1SDBjL0orcURMZytld2VjLS1XL05HRXVQNlJ1VU0xVG1FSEFEeUVRPT0%3D--4037e5ca1870bd3dade761647627a97a0224cc8d}
+2022-09-17 17:31:21.959 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 自动设置Cookie：{user_locale=zh-CN, oschina_new_user=false, gitee-session-n=ekRUVmdKdWl3M0cxdUNHYy9jL2FxbmNEMzNqbmgvTmVSODVjN0JwSWpqZEd0Nkt5Q21NQmNpT0hFbWxYV2ZYcXVyME9XS29heTFjclJaMi9QTEJJZDQ4YjV2UFFWYVVtTXk2b2pxdjlvME5WSnduSUo4b0pQTHNXN3pSaEY3NU50dlltV2RuaGNLRmw2dGQvQ1pJM0dqek1rTzhTdWcyUnhrKy9Cb3lMLzlzQUhSOEd1SDBjL0orcURMZytld2VjLS1XL05HRXVQNlJ1VU0xVG1FSEFEeUVRPT0%3D--4037e5ca1870bd3dade761647627a97a0224cc8d}
+2022-09-17 17:31:21.959 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 自动设置Cookie：{user_locale=zh-CN, oschina_new_user=false, gitee-session-n=ekRUVmdKdWl3M0cxdUNHYy9jL2FxbmNEMzNqbmgvTmVSODVjN0JwSWpqZEd0Nkt5Q21NQmNpT0hFbWxYV2ZYcXVyME9XS29heTFjclJaMi9QTEJJZDQ4YjV2UFFWYVVtTXk2b2pxdjlvME5WSnduSUo4b0pQTHNXN3pSaEY3NU50dlltV2RuaGNLRmw2dGQvQ1pJM0dqek1rTzhTdWcyUnhrKy9Cb3lMLzlzQUhSOEd1SDBjL0orcURMZytld2VjLS1XL05HRXVQNlJ1VU0xVG1FSEFEeUVRPT0%3D--4037e5ca1870bd3dade761647627a97a0224cc8d}
+2022-09-17 17:31:21.959 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 自动设置Cookie：{user_locale=zh-CN, oschina_new_user=false, gitee-session-n=ekRUVmdKdWl3M0cxdUNHYy9jL2FxbmNEMzNqbmgvTmVSODVjN0JwSWpqZEd0Nkt5Q21NQmNpT0hFbWxYV2ZYcXVyME9XS29heTFjclJaMi9QTEJJZDQ4YjV2UFFWYVVtTXk2b2pxdjlvME5WSnduSUo4b0pQTHNXN3pSaEY3NU50dlltV2RuaGNLRmw2dGQvQ1pJM0dqek1rTzhTdWcyUnhrKy9Cb3lMLzlzQUhSOEd1SDBjL0orcURMZytld2VjLS1XL05HRXVQNlJ1VU0xVG1FSEFEeUVRPT0%3D--4037e5ca1870bd3dade761647627a97a0224cc8d}
+2022-09-17 17:31:21.959 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 自动设置Cookie：{user_locale=zh-CN, oschina_new_user=false, gitee-session-n=ekRUVmdKdWl3M0cxdUNHYy9jL2FxbmNEMzNqbmgvTmVSODVjN0JwSWpqZEd0Nkt5Q21NQmNpT0hFbWxYV2ZYcXVyME9XS29heTFjclJaMi9QTEJJZDQ4YjV2UFFWYVVtTXk2b2pxdjlvME5WSnduSUo4b0pQTHNXN3pSaEY3NU50dlltV2RuaGNLRmw2dGQvQ1pJM0dqek1rTzhTdWcyUnhrKy9Cb3lMLzlzQUhSOEd1SDBjL0orcURMZytld2VjLS1XL05HRXVQNlJ1VU0xVG1FSEFEeUVRPT0%3D--4037e5ca1870bd3dade761647627a97a0224cc8d}
+2022-09-17 17:31:21.959 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 自动设置Cookie：{user_locale=zh-CN, oschina_new_user=false, gitee-session-n=ekRUVmdKdWl3M0cxdUNHYy9jL2FxbmNEMzNqbmgvTmVSODVjN0JwSWpqZEd0Nkt5Q21NQmNpT0hFbWxYV2ZYcXVyME9XS29heTFjclJaMi9QTEJJZDQ4YjV2UFFWYVVtTXk2b2pxdjlvME5WSnduSUo4b0pQTHNXN3pSaEY3NU50dlltV2RuaGNLRmw2dGQvQ1pJM0dqek1rTzhTdWcyUnhrKy9Cb3lMLzlzQUhSOEd1SDBjL0orcURMZytld2VjLS1XL05HRXVQNlJ1VU0xVG1FSEFEeUVRPT0%3D--4037e5ca1870bd3dade761647627a97a0224cc8d}
+2022-09-17 17:31:21.959 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 自动设置Cookie：{user_locale=zh-CN, oschina_new_user=false, gitee-session-n=ekRUVmdKdWl3M0cxdUNHYy9jL2FxbmNEMzNqbmgvTmVSODVjN0JwSWpqZEd0Nkt5Q21NQmNpT0hFbWxYV2ZYcXVyME9XS29heTFjclJaMi9QTEJJZDQ4YjV2UFFWYVVtTXk2b2pxdjlvME5WSnduSUo4b0pQTHNXN3pSaEY3NU50dlltV2RuaGNLRmw2dGQvQ1pJM0dqek1rTzhTdWcyUnhrKy9Cb3lMLzlzQUhSOEd1SDBjL0orcURMZytld2VjLS1XL05HRXVQNlJ1VU0xVG1FSEFEeUVRPT0%3D--4037e5ca1870bd3dade761647627a97a0224cc8d}
+2022-09-17 17:31:21.960 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 自动设置Cookie：{user_locale=zh-CN, oschina_new_user=false, gitee-session-n=ekRUVmdKdWl3M0cxdUNHYy9jL2FxbmNEMzNqbmgvTmVSODVjN0JwSWpqZEd0Nkt5Q21NQmNpT0hFbWxYV2ZYcXVyME9XS29heTFjclJaMi9QTEJJZDQ4YjV2UFFWYVVtTXk2b2pxdjlvME5WSnduSUo4b0pQTHNXN3pSaEY3NU50dlltV2RuaGNLRmw2dGQvQ1pJM0dqek1rTzhTdWcyUnhrKy9Cb3lMLzlzQUhSOEd1SDBjL0orcURMZytld2VjLS1XL05HRXVQNlJ1VU0xVG1FSEFEeUVRPT0%3D--4037e5ca1870bd3dade761647627a97a0224cc8d}
+2022-09-17 17:31:22.748 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://gitee.com//mymagicpower/AIAS
+2022-09-17 17:31:22.749 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 自动设置Cookie：{user_locale=zh-CN, oschina_new_user=false, gitee-session-n=V1BkRVVEME5rTCtrRTdtZldNSk91TFNMRDQ1ZHZBb3RHQ1c2QzZFSkVicmZuT3o1Z21LMkNDdEh4Q0huM2lsMGFqU2x6bVJJczBRdGNHcWNtOVVaVHU2NWxydjZwZGxYSVZyYSs5ZVRXZkEwUitVd1JzaW56aVpMb082WWVLd3dQeTlBanVHcG00bzBWc0ZTNmVXZkU2NW15Y0xKeE9yK1pkdlZMUTEvOU5JYjNnUFhrODZWbFpONmVVS1VVbHhBLS1Yc2xIMVFjeTFFdFZENzlVZ3hhSk53PT0%3D--abd29f285986416b8b7fbf4dab83a31b12ffeedf}
+2022-09-17 17:31:22.826 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://gitee.com//anji-plus/captcha
+2022-09-17 17:31:22.827 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 自动设置Cookie：{user_locale=zh-CN, oschina_new_user=false, gitee-session-n=V1BkRVVEME5rTCtrRTdtZldNSk91TFNMRDQ1ZHZBb3RHQ1c2QzZFSkVicmZuT3o1Z21LMkNDdEh4Q0huM2lsMGFqU2x6bVJJczBRdGNHcWNtOVVaVHU2NWxydjZwZGxYSVZyYSs5ZVRXZkEwUitVd1JzaW56aVpMb082WWVLd3dQeTlBanVHcG00bzBWc0ZTNmVXZkU2NW15Y0xKeE9yK1pkdlZMUTEvOU5JYjNnUFhrODZWbFpONmVVS1VVbHhBLS1Yc2xIMVFjeTFFdFZENzlVZ3hhSk53PT0%3D--abd29f285986416b8b7fbf4dab83a31b12ffeedf}
+2022-09-17 17:31:23.652 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 17:31:43.464 ERROR org.apache.tomcat.websocket.pojo.PojoEndpointBase - No error handling configured for [org.spiderflow.websocket.WebSocketEditorServer] and the following error occurred
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1289)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1223)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:72)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:171)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:151)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:148)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:54)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:53)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 18:31:36.620 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.oschina.net/tweets/widgets/_tweet_index_list 
+2022-09-17 18:31:36.621 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：type=ajax
+2022-09-17 18:31:36.622 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：lastLogId=null
+2022-09-17 18:31:36.898 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(tweets)}=0
+2022-09-17 18:31:36.898 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.oschina.net/tweets/widgets/_tweet_index_list 
+2022-09-17 18:31:36.899 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：type=ajax
+2022-09-17 18:31:36.900 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：lastLogId=null
+2022-09-17 18:31:37.194 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(tweets)}=0
+2022-09-17 18:31:37.194 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.oschina.net/tweets/widgets/_tweet_index_list 
+2022-09-17 18:31:37.195 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：type=ajax
+2022-09-17 18:31:37.195 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：lastLogId=null
+2022-09-17 18:31:37.474 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(tweets)}=0
+2022-09-17 18:31:37.474 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.oschina.net/tweets/widgets/_tweet_index_list 
+2022-09-17 18:31:37.475 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：type=ajax
+2022-09-17 18:31:37.475 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：lastLogId=null
+2022-09-17 18:31:37.698 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(tweets)}=0
+2022-09-17 18:31:37.700 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 18:31:54.479 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.oschina.net/tweets/widgets/_tweet_index_list 
+2022-09-17 18:31:54.480 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：type=ajax
+2022-09-17 18:31:54.481 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：lastLogId=null
+2022-09-17 18:31:54.804 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(tweets)}=0
+2022-09-17 18:31:54.804 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.oschina.net/tweets/widgets/_tweet_index_list 
+2022-09-17 18:31:54.804 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：type=ajax
+2022-09-17 18:31:54.806 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：lastLogId=null
+2022-09-17 18:31:55.013 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(tweets)}=0
+2022-09-17 18:31:55.013 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.oschina.net/tweets/widgets/_tweet_index_list 
+2022-09-17 18:31:55.014 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：type=ajax
+2022-09-17 18:31:55.014 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：lastLogId=null
+2022-09-17 18:31:55.214 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(tweets)}=0
+2022-09-17 18:31:55.214 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.oschina.net/tweets/widgets/_tweet_index_list 
+2022-09-17 18:31:55.215 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：type=ajax
+2022-09-17 18:31:55.215 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：lastLogId=null
+2022-09-17 18:31:55.496 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(tweets)}=0
+2022-09-17 18:31:55.498 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 18:32:14.048 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:http://www.beijingprice.cn:8086/price/priceToday/PageLoad/LoadPrice?jsoncallback=1
+2022-09-17 18:32:14.553 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(data)}=31
+2022-09-17 18:32:14.616 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 18:32:26.994 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.oschina.net/tweets/widgets/_tweet_index_list 
+2022-09-17 18:32:26.995 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：type=ajax
+2022-09-17 18:32:26.995 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：lastLogId=null
+2022-09-17 18:32:27.450 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(tweets)}=0
+2022-09-17 18:32:27.450 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.oschina.net/tweets/widgets/_tweet_index_list 
+2022-09-17 18:32:27.452 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：type=ajax
+2022-09-17 18:32:27.453 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：lastLogId=null
+2022-09-17 18:32:27.752 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(tweets)}=0
+2022-09-17 18:32:27.752 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.oschina.net/tweets/widgets/_tweet_index_list 
+2022-09-17 18:32:27.752 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：type=ajax
+2022-09-17 18:32:27.753 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：lastLogId=null
+2022-09-17 18:32:28.162 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(tweets)}=0
+2022-09-17 18:32:28.162 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.oschina.net/tweets/widgets/_tweet_index_list 
+2022-09-17 18:32:28.163 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：type=ajax
+2022-09-17 18:32:28.163 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求参数：lastLogId=null
+2022-09-17 18:32:28.572 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(tweets)}=0
+2022-09-17 18:32:28.576 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 18:32:36.219 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://top.baidu.com/buzz?b=1&fr=topindex
+2022-09-17 18:32:36.449 INFO  org.spiderflow.core.Spider - 获取循环次数${elementbd.size()-1}=-1
+2022-09-17 18:32:36.452 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 18:41:11.279 ERROR org.apache.tomcat.websocket.pojo.PojoEndpointBase - No error handling configured for [org.spiderflow.websocket.WebSocketEditorServer] and the following error occurred
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1289)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1223)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:72)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:171)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:151)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:148)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:54)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:53)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 18:41:11.279 ERROR org.apache.tomcat.websocket.pojo.PojoEndpointBase - No error handling configured for [org.spiderflow.websocket.WebSocketEditorServer] and the following error occurred
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1289)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1223)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:72)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:171)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:151)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:148)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:54)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:53)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 18:41:11.279 ERROR org.apache.tomcat.websocket.pojo.PojoEndpointBase - No error handling configured for [org.spiderflow.websocket.WebSocketEditorServer] and the following error occurred
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1289)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1223)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:72)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:171)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:151)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:148)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:54)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:53)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 19:10:38.334 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url: https://www.agemys.cc/catalog/all-all-all-all-all-time-null
+2022-09-17 19:10:39.178 ERROR org.spiderflow.core.executor.shape.RequestExecutor - 请求 https://www.agemys.cc/catalog/all-all-all-all-all-time-null出错,异常信息:null
+2022-09-17 19:10:39.186 ERROR org.spiderflow.core.Spider - 获取循环次数失败,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.spiderflow.core.executor.function.ListFunctionExecutor'中找不到方法 length(null)
+
+${list.length(animelist)}
+       ^^^^^^^^^^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:226)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 19:10:39.191 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 19:13:14.208 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url: https://www.agemys.cc/catalog/all-all-all-all-all-timenull
+2022-09-17 19:13:14.840 ERROR org.spiderflow.core.executor.shape.RequestExecutor - 请求 https://www.agemys.cc/catalog/all-all-all-all-all-timenull出错,异常信息:null
+2022-09-17 19:13:14.882 ERROR org.spiderflow.core.Spider - 获取循环次数失败,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.spiderflow.core.executor.function.ListFunctionExecutor'中找不到方法 length(null)
+
+${list.length(animelist)}
+       ^^^^^^^^^^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:226)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 19:13:14.886 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 19:13:46.993 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url: https://www.agemys.cc/catalog/all-all-all-all-all-time-null
+2022-09-17 19:13:47.609 ERROR org.spiderflow.core.executor.shape.RequestExecutor - 请求 https://www.agemys.cc/catalog/all-all-all-all-all-time-null出错,异常信息:null
+2022-09-17 19:13:47.612 ERROR org.spiderflow.core.Spider - 获取循环次数失败,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.spiderflow.core.executor.function.ListFunctionExecutor'中找不到方法 length(null)
+
+${list.length(animelist)}
+       ^^^^^^^^^^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:226)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 19:13:47.615 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 19:15:59.752 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-null
+2022-09-17 19:16:00.422 ERROR org.spiderflow.core.executor.shape.RequestExecutor - 请求https://www.agemys.cc/catalog/all-all-all-all-all-time-null出错,异常信息:null
+2022-09-17 19:16:00.425 ERROR org.spiderflow.core.Spider - 获取循环次数失败,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.spiderflow.core.executor.function.ListFunctionExecutor'中找不到方法 length(null)
+
+${list.length(animelist)}
+       ^^^^^^^^^^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:226)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 19:16:00.428 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 19:18:21.076 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-1
+2022-09-17 19:18:21.963 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(animelist)}=24
+2022-09-17 19:18:22.082 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 19:20:06.622 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-null
+2022-09-17 19:20:07.312 ERROR org.spiderflow.core.executor.shape.RequestExecutor - 请求https://www.agemys.cc/catalog/all-all-all-all-all-time-null出错,异常信息:null
+2022-09-17 19:20:07.315 ERROR org.spiderflow.core.Spider - 获取循环次数失败,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.spiderflow.core.executor.function.ListFunctionExecutor'中找不到方法 length(null)
+
+${list.length(animelist)}
+       ^^^^^^^^^^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:226)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 19:20:07.318 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 19:31:04.435 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-null
+2022-09-17 19:31:05.247 ERROR org.spiderflow.core.executor.shape.RequestExecutor - 请求https://www.agemys.cc/catalog/all-all-all-all-all-time-null出错,异常信息:null
+2022-09-17 19:31:05.249 ERROR o.spiderflow.core.executor.shape.VariableExecutor - 设置变量page出错，异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): Expected a variable, field, map, array, function or method call, or literal.
+
+${num==null:1?num+1}
+           ^        
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:24)
+	at org.spiderflow.core.expression.parsing.Parser.parseAccessOrCallOrLiteral(Parser.java:156)
+	at org.spiderflow.core.expression.parsing.Parser.parseUnaryOperator(Parser.java:115)
+	at org.spiderflow.core.expression.parsing.Parser.parseBinaryOperator(Parser.java:92)
+	at org.spiderflow.core.expression.parsing.Parser.parseBinaryOperator(Parser.java:92)
+	at org.spiderflow.core.expression.parsing.Parser.parseBinaryOperator(Parser.java:92)
+	at org.spiderflow.core.expression.parsing.Parser.parseBinaryOperator(Parser.java:92)
+	at org.spiderflow.core.expression.parsing.Parser.parseBinaryOperator(Parser.java:92)
+	at org.spiderflow.core.expression.parsing.Parser.parseBinaryOperator(Parser.java:92)
+	at org.spiderflow.core.expression.parsing.Parser.parseTernaryOperator(Parser.java:74)
+	at org.spiderflow.core.expression.parsing.Parser.parseExpression(Parser.java:70)
+	at org.spiderflow.core.expression.parsing.Parser.parseStatement(Parser.java:59)
+	at org.spiderflow.core.expression.parsing.Parser.parse(Parser.java:46)
+	at org.spiderflow.core.expression.ExpressionTemplate.create(ExpressionTemplate.java:26)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 19:31:05.252 ERROR org.spiderflow.core.Spider - 执行节点[定义变量:5]出错,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): Expected a variable, field, map, array, function or method call, or literal.
+
+${num==null:1?num+1}
+           ^        
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:24)
+	at org.spiderflow.core.expression.parsing.Parser.parseAccessOrCallOrLiteral(Parser.java:156)
+	at org.spiderflow.core.expression.parsing.Parser.parseUnaryOperator(Parser.java:115)
+	at org.spiderflow.core.expression.parsing.Parser.parseBinaryOperator(Parser.java:92)
+	at org.spiderflow.core.expression.parsing.Parser.parseBinaryOperator(Parser.java:92)
+	at org.spiderflow.core.expression.parsing.Parser.parseBinaryOperator(Parser.java:92)
+	at org.spiderflow.core.expression.parsing.Parser.parseBinaryOperator(Parser.java:92)
+	at org.spiderflow.core.expression.parsing.Parser.parseBinaryOperator(Parser.java:92)
+	at org.spiderflow.core.expression.parsing.Parser.parseBinaryOperator(Parser.java:92)
+	at org.spiderflow.core.expression.parsing.Parser.parseTernaryOperator(Parser.java:74)
+	at org.spiderflow.core.expression.parsing.Parser.parseExpression(Parser.java:70)
+	at org.spiderflow.core.expression.parsing.Parser.parseStatement(Parser.java:59)
+	at org.spiderflow.core.expression.parsing.Parser.parse(Parser.java:46)
+	at org.spiderflow.core.expression.ExpressionTemplate.create(ExpressionTemplate.java:26)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 19:31:05.257 ERROR org.spiderflow.core.Spider - 获取循环次数失败,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.spiderflow.core.executor.function.ListFunctionExecutor'中找不到方法 length(null)
+
+${list.length(animelist)}
+       ^^^^^^^^^^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:226)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 19:31:05.260 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 19:32:14.149 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-null
+2022-09-17 19:32:14.675 ERROR org.spiderflow.core.executor.shape.RequestExecutor - 请求https://www.agemys.cc/catalog/all-all-all-all-all-time-null出错,异常信息:null
+2022-09-17 19:32:14.677 ERROR org.spiderflow.core.Spider - 获取循环次数失败,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.spiderflow.core.executor.function.ListFunctionExecutor'中找不到方法 length(null)
+
+${list.length(animelist)}
+       ^^^^^^^^^^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:226)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 19:32:14.679 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 19:32:32.985 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-2
+2022-09-17 19:32:33.823 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(animelist)}=24
+2022-09-17 19:32:33.964 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 19:32:50.916 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-3
+2022-09-17 19:32:51.743 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(animelist)}=24
+2022-09-17 19:32:51.866 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 19:34:53.577 ERROR org.apache.tomcat.websocket.pojo.PojoEndpointBase - No error handling configured for [org.spiderflow.websocket.WebSocketEditorServer] and the following error occurred
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1289)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1223)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:72)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:171)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:151)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:148)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:54)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:53)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 19:52:00.119 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-null
+2022-09-17 19:52:00.849 ERROR org.spiderflow.core.executor.shape.RequestExecutor - 请求https://www.agemys.cc/catalog/all-all-all-all-all-time-null出错,异常信息:null
+2022-09-17 19:52:00.852 ERROR org.spiderflow.core.Spider - 获取循环次数失败,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.spiderflow.core.executor.function.ListFunctionExecutor'中找不到方法 length(null)
+
+${list.length(animelist)}
+       ^^^^^^^^^^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:226)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 19:52:00.855 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 19:52:25.944 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-8
+2022-09-17 19:52:26.819 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(animelist)}=24
+2022-09-17 19:52:26.968 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 20:18:16.098 ERROR org.apache.tomcat.websocket.pojo.PojoEndpointBase - No error handling configured for [org.spiderflow.websocket.WebSocketEditorServer] and the following error occurred
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1289)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1223)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:72)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:171)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:151)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:148)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:54)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:53)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 22:39:05.010 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://search.bilibili.com/article?keyword=jk&from_source=webtop_search&spm_id_from=333.880
+2022-09-17 22:39:05.481 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(jklist)}=0
+2022-09-17 22:39:05.484 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 22:39:41.817 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://search.bilibili.com/article?keyword=jk&from_source=webtop_search&spm_id_from=333.880
+2022-09-17 22:39:42.201 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(jklist)}=0
+2022-09-17 22:39:42.202 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 22:41:28.195 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://search.bilibili.com/article?keyword=jk&from_source=webtop_search&spm_id_from=333.880
+2022-09-17 22:41:28.527 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(jklist)}=0
+2022-09-17 22:41:28.531 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 22:57:54.214 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-3
+2022-09-17 22:57:55.050 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(animelist)}=24
+2022-09-17 22:57:55.153 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 22:58:14.350 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-7
+2022-09-17 22:58:15.016 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(animelist)}=24
+2022-09-17 22:58:15.115 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 22:58:37.706 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://search.bilibili.com/article?keyword=jk&from_source=webtop_search&spm_id_from=333.880
+2022-09-17 22:58:38.011 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(jklist)}=0
+2022-09-17 22:58:38.012 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 23:01:14.037 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://search.bilibili.com/article?keyword=jk&from_source=webtop_search&spm_id_from=333.880
+2022-09-17 23:01:14.444 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(jklist)}=0
+2022-09-17 23:01:14.445 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 23:02:20.112 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://search.bilibili.com/article?keyword=jk&from_source=webtop_search&spm_id_from=333.880
+2022-09-17 23:02:20.469 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(jklist)}=0
+2022-09-17 23:02:20.470 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 23:22:34.663 ERROR org.apache.tomcat.websocket.pojo.PojoEndpointBase - No error handling configured for [org.spiderflow.websocket.WebSocketEditorServer] and the following error occurred
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1289)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1223)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:72)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:171)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:151)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:148)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:54)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:53)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-17 23:41:51.422 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-10
+2022-09-17 23:41:52.301 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(animelist)}=24
+2022-09-17 23:41:52.395 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 23:58:48.499 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-10
+2022-09-17 23:58:49.331 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(animelist)}=24
+2022-09-17 23:58:49.431 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 23:58:52.812 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-10
+2022-09-17 23:58:53.147 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(animelist)}=24
+2022-09-17 23:58:53.244 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 23:58:55.574 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-10
+2022-09-17 23:58:55.908 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(animelist)}=24
+2022-09-17 23:58:56.000 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 23:59:01.607 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-10
+2022-09-17 23:59:02.254 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(animelist)}=24
+2022-09-17 23:59:02.355 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-17 23:59:07.968 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/catalog/all-all-all-all-all-time-3
+2022-09-17 23:59:08.630 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(animelist)}=24
+2022-09-17 23:59:08.732 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-18 00:09:04.843 ERROR org.apache.tomcat.websocket.pojo.PojoEndpointBase - No error handling configured for [org.spiderflow.websocket.WebSocketEditorServer] and the following error occurred
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1289)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1223)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:72)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:171)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:151)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:148)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:54)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:53)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-18 13:39:57.599 INFO  org.spiderflow.SpiderApplication - Starting SpiderApplication on LAPTOP-JSOKR72D with PID 48712 (D:\spider-flow-0.5.0\spider-flow-web\target\classes started by 13928 in D:\data structure\代码\algorithm)
+2022-09-18 13:39:57.599 INFO  org.spiderflow.SpiderApplication - No active profile set, falling back to default profiles: default
+2022-09-18 13:39:57.636 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1199fe66: startup date [Sun Sep 18 13:39:57 CST 2022]; root of context hierarchy
+2022-09-18 13:39:59.317 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2022-09-18 13:39:59.317 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2022-09-18 13:39:59.333 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-18 13:39:59.333 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.35
+2022-09-18 13:39:59.348 INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\jdk\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\java web\apache-maven-3.8.5\bin;;D:\微信web开发者工具\dll;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\13928\AppData\Local\Microsoft\WindowsApps;;D:\WebStorm 2022.2.1\bin;;D:\CLion 2022.1.3\bin;;.]
+2022-09-18 13:39:59.495 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-18 13:39:59.495 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1859 ms
+2022-09-18 13:39:59.584 INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2022-09-18 13:39:59.588 INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-09-18 13:39:59.589 INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-09-18 13:39:59.589 INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2022-09-18 13:39:59.589 INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2022-09-18 13:39:59.664 INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2022-09-18 13:39:59.765 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-09-18 13:40:00.189 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration - mapper[org.spiderflow.core.mapper.SpiderFlowMapper.resetNextExecuteTime] is ignored, because it exists, maybe from xml file
+2022-09-18 13:40:00.846 INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2022-09-18 13:40:00.861 INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-18 13:40:00.861 INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2022-09-18 13:40:00.861 INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2022-09-18 13:40:00.861 INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-09-18 13:40:00.861 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-18 13:40:00.861 INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2022-09-18 13:40:00.861 INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@1fe8f5e8
+2022-09-18 13:40:01.109 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1199fe66: startup date [Sun Sep 18 13:39:57 CST 2022]; root of context hierarchy
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/datasource/remove]}" onto public void org.spiderflow.controller.DataSourceController.remove(java.lang.String)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/datasource/get]}" onto public org.spiderflow.core.model.DataSource org.spiderflow.controller.DataSourceController.get(java.lang.String)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/datasource/list]}" onto public com.baomidou.mybatisplus.core.metadata.IPage<org.spiderflow.core.model.DataSource> org.spiderflow.controller.DataSourceController.list(java.lang.Integer,java.lang.Integer)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/datasource/test]}" onto public org.spiderflow.model.JsonBean<java.lang.Void> org.spiderflow.controller.DataSourceController.test(org.spiderflow.core.model.DataSource)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/datasource/save]}" onto public java.lang.String org.spiderflow.controller.DataSourceController.save(org.spiderflow.core.model.DataSource)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/datasource/all]}" onto public java.util.List<org.spiderflow.core.model.DataSource> org.spiderflow.controller.DataSourceController.all()
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/flowNotice/save]}" onto public org.spiderflow.model.JsonBean<org.spiderflow.core.model.FlowNotice> org.spiderflow.controller.FlowNoticeController.save(org.spiderflow.core.model.FlowNotice)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/flowNotice/find]}" onto public org.spiderflow.model.JsonBean<org.spiderflow.core.model.FlowNotice> org.spiderflow.controller.FlowNoticeController.find(java.lang.String)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/flowNotice/getNoticeWay]}" onto public org.spiderflow.model.JsonBean<java.util.Map<java.lang.String, java.lang.String>> org.spiderflow.controller.FlowNoticeController.getNoticeWay(java.lang.String)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/function/remove]}" onto public void org.spiderflow.controller.FunctionController.remove(java.lang.String)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/function/get]}" onto public org.spiderflow.core.model.Function org.spiderflow.controller.FunctionController.get(java.lang.String)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/function/list]}" onto public com.baomidou.mybatisplus.core.metadata.IPage<org.spiderflow.core.model.Function> org.spiderflow.controller.FunctionController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/function/save]}" onto public java.lang.String org.spiderflow.controller.FunctionController.save(org.spiderflow.core.model.Function)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/run]}" onto public void org.spiderflow.controller.SpiderFlowController.run(java.lang.String)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/remove]}" onto public void org.spiderflow.controller.SpiderFlowController.remove(java.lang.String)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/get]}" onto public org.spiderflow.core.model.SpiderFlow org.spiderflow.controller.SpiderFlowController.get(java.lang.String)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/log]}" onto public org.spiderflow.model.JsonBean<java.util.List<org.spiderflow.io.Line>> org.spiderflow.controller.SpiderFlowController.log(java.lang.String,java.lang.String,java.lang.String,java.lang.Long,java.lang.Integer,java.lang.Boolean,java.lang.Boolean,java.lang.Boolean)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/other]}" onto public java.util.List<org.spiderflow.core.model.SpiderFlow> org.spiderflow.controller.SpiderFlowController.other(java.lang.String)
+2022-09-18 13:40:01.162 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/list]}" onto public com.baomidou.mybatisplus.core.metadata.IPage<org.spiderflow.core.model.SpiderFlow> org.spiderflow.controller.SpiderFlowController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/start]}" onto public void org.spiderflow.controller.SpiderFlowController.start(java.lang.String)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/stop]}" onto public void org.spiderflow.controller.SpiderFlowController.stop(java.lang.String)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/save]}" onto public java.lang.String org.spiderflow.controller.SpiderFlowController.save(org.spiderflow.core.model.SpiderFlow)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/xml]}" onto public java.lang.String org.spiderflow.controller.SpiderFlowController.xml(java.lang.String)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/history]}" onto public org.spiderflow.model.JsonBean<?> org.spiderflow.controller.SpiderFlowController.history(java.lang.String,java.lang.String)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/log/download]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.FileSystemResource> org.spiderflow.controller.SpiderFlowController.download(java.lang.String,java.lang.String)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/grammers]}" onto public org.spiderflow.model.JsonBean<java.util.List<org.spiderflow.model.Grammer>> org.spiderflow.controller.SpiderFlowController.grammers()
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/pluginConfigs]}" onto public java.util.List<org.spiderflow.model.Plugin> org.spiderflow.controller.SpiderFlowController.pluginConfigs()
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/cron]}" onto public void org.spiderflow.controller.SpiderFlowController.cron(java.lang.String,java.lang.String)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/recent5TriggerTime],methods=[GET]}" onto public java.util.List<java.lang.String> org.spiderflow.controller.SpiderFlowController.getRecent5TriggerTime(java.lang.String)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/spider/shapes]}" onto public java.util.List<org.spiderflow.model.Shape> org.spiderflow.controller.SpiderFlowController.shapes()
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/rest/run/{id}]}" onto public org.spiderflow.model.JsonBean<java.util.List<org.spiderflow.model.SpiderOutput>> org.spiderflow.controller.SpiderRestController.run(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/rest/status/{taskId}]}" onto public org.spiderflow.model.JsonBean<java.lang.Integer> org.spiderflow.controller.SpiderRestController.status(java.lang.Integer)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/rest/stop/{taskId}]}" onto public org.spiderflow.model.JsonBean<java.lang.Void> org.spiderflow.controller.SpiderRestController.stop(java.lang.Integer)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/rest/runAsync/{id}]}" onto public org.spiderflow.model.JsonBean<java.lang.Integer> org.spiderflow.controller.SpiderRestController.runAsync(java.lang.String)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/task/remove]}" onto public org.spiderflow.model.JsonBean<java.lang.Boolean> org.spiderflow.controller.TaskController.remove(java.lang.Integer)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/task/list]}" onto public com.baomidou.mybatisplus.core.metadata.IPage<org.spiderflow.core.model.Task> org.spiderflow.controller.TaskController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/task/stop]}" onto public org.spiderflow.model.JsonBean<java.lang.Boolean> org.spiderflow.controller.TaskController.stop(java.lang.Integer)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/variable/get]}" onto public org.spiderflow.model.JsonBean<T> org.spiderflow.common.CURDController.get(java.lang.String)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/variable/list]}" onto public com.baomidou.mybatisplus.core.metadata.IPage<T> org.spiderflow.common.CURDController.list(java.lang.Integer,java.lang.Integer)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/variable/delete]}" onto public org.spiderflow.model.JsonBean<java.lang.Boolean> org.spiderflow.common.CURDController.delete(java.lang.String)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/variable/save]}" onto public org.spiderflow.model.JsonBean<java.lang.Boolean> org.spiderflow.common.CURDController.save(T)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2022-09-18 13:40:01.178 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022-09-18 13:40:01.209 INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-09-18 13:40:01.209 INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-09-18 13:40:01.209 INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-09-18 13:40:01.275 INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2022-09-18 13:40:01.548 INFO  o.s.w.s.server.standard.ServerEndpointExporter - Registering @ServerEndpoint class: class org.spiderflow.websocket.WebSocketEditorServer
+2022-09-18 13:40:01.563 INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2022-09-18 13:40:01.563 INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2022-09-18 13:40:01.563 INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2022-09-18 13:40:01.563 INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2022-09-18 13:40:01.563 INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2022-09-18 13:40:01.563 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-09-18 13:40:01.579 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2022-09-18 13:40:01.579 INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2022-09-18 13:40:01.595 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2022-09-18 13:40:01.610 INFO  org.spiderflow.SpiderApplication - Started SpiderApplication in 4.313 seconds (JVM running for 8.02)
+2022-09-18 13:40:34.672 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2022-09-18 13:40:34.672 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2022-09-18 13:40:34.704 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2022-09-18 13:47:17.002 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/detail/20220002
+2022-09-18 13:47:18.496 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(imglist)}=9
+2022-09-18 13:47:18.563 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-18 13:48:07.937 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/detail/20220002
+2022-09-18 13:48:08.601 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(imglist)}=9
+2022-09-18 13:48:08.671 ERROR o.spiderflow.core.executor.shape.VariableExecutor - 设置变量img出错，异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.jsoup.nodes.Element'中找不到方法 images()
+
+${imglist[index].selector('.poster').images()}
+                                     ^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-18 13:48:08.671 ERROR org.spiderflow.core.Spider - 执行节点[定义变量:8]出错,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.jsoup.nodes.Element'中找不到方法 images()
+
+${imglist[index].selector('.poster').images()}
+                                     ^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-18 13:48:08.692 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-18 13:48:53.991 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/detail/20220002
+2022-09-18 13:48:54.778 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(imglist)}=9
+2022-09-18 13:48:54.807 ERROR o.spiderflow.core.executor.shape.VariableExecutor - 设置变量img出错，异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.jsoup.nodes.Element'中找不到方法 download()
+
+${imglist[index].selector('.poster').download()}
+                                     ^^^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-18 13:48:54.807 ERROR org.spiderflow.core.Spider - 执行节点[定义变量:8]出错,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.jsoup.nodes.Element'中找不到方法 download()
+
+${imglist[index].selector('.poster').download()}
+                                     ^^^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-18 13:48:54.824 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-18 13:49:44.966 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/detail/20220002
+2022-09-18 13:49:45.664 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(imglist)}=9
+2022-09-18 13:49:45.684 ERROR o.spiderflow.core.executor.shape.VariableExecutor - 设置变量img出错，异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.jsoup.nodes.Element'中找不到方法 images()
+
+${imglist[index].selector('.poster').images()}
+                                     ^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-18 13:49:45.684 ERROR org.spiderflow.core.Spider - 执行节点[定义变量:8]出错,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.jsoup.nodes.Element'中找不到方法 images()
+
+${imglist[index].selector('.poster').images()}
+                                     ^^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-18 13:49:45.720 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-18 13:50:04.720 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/detail/20220002
+2022-09-18 13:50:05.333 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(imglist)}=9
+2022-09-18 13:50:05.341 ERROR o.spiderflow.core.executor.shape.VariableExecutor - 设置变量img出错，异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.jsoup.nodes.Element'中找不到方法 texts()
+
+${imglist[index].selector('.poster').texts()}
+                                     ^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-18 13:50:05.343 ERROR org.spiderflow.core.Spider - 执行节点[定义变量:8]出错,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.jsoup.nodes.Element'中找不到方法 texts()
+
+${imglist[index].selector('.poster').texts()}
+                                     ^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-18 13:50:05.375 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-18 13:50:06.687 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/detail/20220002
+2022-09-18 13:50:06.972 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(imglist)}=9
+2022-09-18 13:50:07.014 ERROR o.spiderflow.core.executor.shape.VariableExecutor - 设置变量img出错，异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.jsoup.nodes.Element'中找不到方法 texts()
+
+${imglist[index].selector('.poster').texts()}
+                                     ^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-18 13:50:07.014 ERROR org.spiderflow.core.Spider - 执行节点[定义变量:8]出错,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.jsoup.nodes.Element'中找不到方法 texts()
+
+${imglist[index].selector('.poster').texts()}
+                                     ^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-18 13:50:07.026 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-18 13:52:14.924 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://www.agemys.cc/detail/20220002
+2022-09-18 13:52:15.595 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(imglist)}=9
+2022-09-18 13:52:15.629 ERROR o.spiderflow.core.executor.shape.VariableExecutor - 设置变量img出错，异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.jsoup.nodes.Element'中找不到方法 texts()
+
+${imglist[index].selector('.collect_add').texts()}
+                                          ^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-18 13:52:15.629 ERROR org.spiderflow.core.Spider - 执行节点[定义变量:8]出错,异常信息：{}
+org.spiderflow.core.expression.ExpressionError$TemplateException: Error (1): 在'class org.jsoup.nodes.Element'中找不到方法 texts()
+
+${imglist[index].selector('.collect_add').texts()}
+                                          ^^^^^^^ 
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:51)
+	at org.spiderflow.core.expression.ExpressionError.error(ExpressionError.java:59)
+	at org.spiderflow.core.expression.parsing.Ast$MethodCall.evaluate(Ast.java:1235)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpretNodeList(AstInterpreter.java:46)
+	at org.spiderflow.core.expression.interpreter.AstInterpreter.interpret(AstInterpreter.java:31)
+	at org.spiderflow.core.expression.ExpressionTemplate.render(ExpressionTemplate.java:36)
+	at org.spiderflow.core.expression.DefaultExpressionEngine.execute(DefaultExpressionEngine.java:46)
+	at org.spiderflow.core.utils.ExpressionUtils.execute(ExpressionUtils.java:56)
+	at org.spiderflow.core.executor.shape.VariableExecutor.execute(VariableExecutor.java:37)
+	at org.spiderflow.core.Spider.lambda$executeNode$4(Spider.java:285)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.spiderflow.core.Spider.executeNode(Spider.java:303)
+	at org.spiderflow.core.Spider.executeNextNodes(Spider.java:193)
+	at org.spiderflow.core.Spider.lambda$executeRoot$3(Spider.java:159)
+	at com.alibaba.ttl.TtlRunnable.run(TtlRunnable.java:55)
+	at org.spiderflow.concurrent.SpiderFlowThreadPoolExecutor$SubThreadPoolExecutor.lambda$submitAsync$0(SpiderFlowThreadPoolExecutor.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-09-18 13:52:15.646 INFO  org.spiderflow.core.Spider - 测试完毕！
+2022-09-18 16:13:54.298 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1199fe66: startup date [Sun Sep 18 13:39:57 CST 2022]; root of context hierarchy
+2022-09-18 16:13:54.304 INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2022-09-18 16:13:54.305 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-18 16:13:54.306 INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2022-09-18 16:13:54.307 INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2022-09-18 16:13:54.308 INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2022-09-18 16:13:54.308 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-09-18 16:13:54.309 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-09-18 16:13:54.309 INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-09-18 16:13:54.310 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2022-09-18 16:13:54.311 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

@@ -1,0 +1,4 @@
+2022-09-17 17:26:04.341 INFO  org.spiderflow.core.job.SpiderJob - 开始执行任务抓取每day菜价
+2022-09-17 17:26:04.345 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:http://www.beijingprice.cn:8086/price/priceToday/PageLoad/LoadPrice?jsoncallback=1
+2022-09-17 17:26:04.487 INFO  org.spiderflow.core.Spider - 获取循环次数${list.length(data)}=31
+2022-09-17 17:26:04.525 INFO  org.spiderflow.core.job.SpiderJob - 执行任务抓取每day菜价完毕，下次执行时间：null

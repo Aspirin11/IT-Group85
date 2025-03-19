@@ -1,0 +1,4 @@
+2022-09-17 17:24:24.200 INFO  org.spiderflow.core.job.SpiderJob - 开始执行任务百度热点
+2022-09-17 17:24:24.318 INFO  org.spiderflow.core.executor.shape.RequestExecutor - 设置请求url:https://top.baidu.com/buzz?b=1&fr=topindex
+2022-09-17 17:24:24.758 INFO  org.spiderflow.core.Spider - 获取循环次数${elementbd.size()-1}=-1
+2022-09-17 17:24:24.760 INFO  org.spiderflow.core.job.SpiderJob - 执行任务百度热点完毕，下次执行时间：null

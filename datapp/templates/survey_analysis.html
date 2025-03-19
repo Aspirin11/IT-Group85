@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Survey Analysis Dashboard</h1>
+</div>
+
+<!-- Content Row -->
+<div class="row">
+    <!-- Survey Response Chart -->
+    <div class="col-xl-8 col-lg-7">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Survey Response Distribution</h6>
+            </div>
+            <div class="card-body">
+                <div id="surveyResponseChart" style="width: 100%; height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question Type Distribution -->
+    <div class="col-xl-4 col-lg-5">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Question Type Distribution</h6>
+            </div>
+            <div class="card-body">
+                <div id="questionTypeChart" style="width: 100%; height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Echarts -->
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+<!-- External JavaScript -->
+<script>
+    var surveyData = [
+        {% for survey in survey_data %}
+        { title: "{{ survey.title }}", response_count: {{ survey.response_count }} }{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    ];
+
+    var questionTypeData = [
+        {% for item in question_type_data %}
+        { type: "{{ item.type }}", count: {{ item.count }} }{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    ];
+</script>
+
+<script src="{% static 'js/survey_analysis.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,35 @@
+/* card */
+.card {
+    background-color: #f8f9fa;
+}
+
+.card-header {
+    background-color: #666;
+}
+
+.card-header .font-weight-bold {
+    color: #fff;
+}
+
+/* button */
+.btn-primary {
+    background-color: #666;
+    border-color: #666;
+}
+
+.container {
+    margin-top: 5rem;
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+}
+
+/* form */
+.form-control {
+    margin-bottom: 1rem;
+}
+
+.w-100 {
+    width: 100%;
+}

@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% load custom_filters %}
+<link rel="stylesheet" href="/static/css/survey_detail.css">
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-xl-12 col-lg-12">
+      <div style="width:100%;height:auto;">
+
+
+
+
+        <div class="row">
+          <div class="col-xl-12 col-lg-6">
+            <div class="card shadow mb-4">
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Statistics for {{ survey.title }}</h6>
+              </div>
+              <!-- Card Body -->
+              <div class="card-body">
+              
+                
+
+                <div class="container1">
+        
+        
+                  <div class="survey-info">
+                    <div>Completion Rate: 100%</div>
+                    <div>End Time: {{ survey.enddate|date:'Y-m-d' }}</div>
+
+                    <a href="{% url 'statistics_pdf' survey.id %}" class="btn btn-primary">
+                      Download PDF
+                    </a>
+                  
+                  </div>
+              
+                  {% for question in questions %}
+                  <div class="question-container">
+                    <div class="question-text">
+                      <h3>{{ question.question_text }}</h3>
+                    </div>
+              
+                    <div class="chart-container">
+                      {% if question.type == '单选题' or question.type == '多选题' %}
+                      <div class="pie-chart">{{ question.pie_chart_html|safe }}</div>
+                      {% endif %}
+                    </div>
+              
+                    {% if question.type == '单选题' or question.type == '多选题' %}
+                    <ul>
+                      {% for option in question.options %}
+                      <li>{{ option.option_text }}: {{ option.count }}</li>
+                      {% endfor %}
+                    </ul>
+                    {% elif question.type == '文本题' %}
+                    <div class="text-answer-container">
+                      <h4>User Text Answers:</h4>
+                      <ul>
+                        {% for answer in question.text_answers %}
+                        <li>{{ answer }}</li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                    {% endif %}
+                  </div>
+                  {% endfor %}
+                </div>
+
+              
+
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

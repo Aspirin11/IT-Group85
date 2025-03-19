@@ -1,0 +1,93 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up & Log In</title>
+    <script href="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="/static/bootstrap-3.4.1/dist/css/bootstrap.css">
+    <!-- 引用外部 CSS 文件 -->
+    <link rel="stylesheet" href="{% static 'css/res.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <span class="emoji">☺</span>Begin Your Survey Journey
+    </div>
+    <div class="container">
+        <div class="content-left">
+            <h1>Insights Begin with Surveys</h1>
+            <p class="description">Welcome to our online survey platform, where every question opens a window into understanding user needs.</p>
+            <p class="description">With intuitive design and powerful analytics, we make it easy to conduct both corporate and academic research.</p>
+            <p class="description">Create your survey today and start your journey towards data-driven decisions!</p>
+        </div>
+        <div class="content-right">
+            <div class="login-box">
+                <h3>Sign Up</h3>
+                <form method="post" action="/res/" novalidate>
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.name }}
+                        {% if form.name.errors %}
+                            <div class="error-message">
+                                {% for error in form.name.errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.email }}
+                        {% if form.email.errors %}
+                            <div class="error-message">
+                                {% for error in form.email.errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.password }}
+                        {% if form.password.errors %}
+                            <div class="error-message">
+                                {% for error in form.password.errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.password1 }}
+                        {% if form.password1.errors %}
+                            <div class="error-message">
+                                {% for error in form.password1.errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Sign Up</button>
+
+                    {% if error %}
+                        <div class="error-message">
+                            <p>{{ error }}</p>
+                        </div>
+                    {% endif %}
+                </form>
+                <div style="text-align: center; margin-top: 15px;">
+                    <a href="/login/">Already have an account? Sign in now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+

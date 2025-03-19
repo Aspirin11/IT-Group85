@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+{% block content %}
+{% load static %}
+
+
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-xl-12 col-lg-12">
+            <div>
+
+
+
+
+                <div class="row">
+                    {% for survey in surveys %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title text-secondary">{{ survey.title }}</h5>
+                                <p class="card-text text-muted">
+                                    <strong>Creator:</strong> {{ survey.createby.name }} <br>
+                                    <strong>Status:</strong> {{ survey.get_status_display }} <br>
+                                    <strong>End Time:</strong> {{ survey.enddate|date:"M d, Y H:i"|chinese_month_to_english }} <br>
+                                </p>
+                                {% if survey.enddate and survey.enddate < current_time %}
+                                <button class="btn btn-secondary w-100" disabled>Survey Ended</button>
+                                {% else %}
+                                <a href="{% url 'fill_survey' survey.id %}" class="btn btn-secondary w-100">Fill Survey</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if messages %}
+    {% for message in messages %}
+    <script>
+
+            alert('{{ message }}');
+
+
+    </script>
+    {% endfor %}
+{% endif %}
+
+
+
+
+{% endblock %}
