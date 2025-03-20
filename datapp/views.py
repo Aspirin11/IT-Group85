@@ -155,12 +155,12 @@ def res(request):
             if password == password1:
                 user = User(name=name, password=password, email=email)
                 user.save()
-                return redirect("/login/")  # 注册成功，不传递错误消息
+                return redirect("/login/")
             else:
-                error = "Passwords do not match. Please try again."  # 错误信息传递到模板
+                error = "Passwords do not match. Please try again."
                 return render(request, "res.html", {"form": form, "error": error})
         else:
-            error = "Please fill in all fields correctly."  # 错误信息传递到模板
+            error = "Please fill in all fields correctly."
             return render(request, "res.html", {"form": form, "error": error})
 
     return render(request, "res.html", {"error": None})
@@ -472,7 +472,7 @@ def survey_statistics(request, survey_id):
 
                 question_data["options"] = option_data
 
-                # # 检查 pie_chart_data 是否为空
+
                 if pie_chart_data:
                     pie = (
                         Pie(init_opts=opts.InitOpts( theme=ThemeType.LIGHT,width='100%', height='20vh'))

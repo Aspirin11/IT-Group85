@@ -2,9 +2,9 @@ from django.db import models
 from django.contrib.auth.hashers import make_password, check_password
 
 class User(models.Model):
-    name = models.CharField(verbose_name="用户名", max_length=16, unique=True)
-    password = models.CharField(verbose_name="密码", max_length=128)
-    email = models.EmailField(verbose_name="邮箱", max_length=64)
+    name = models.CharField(verbose_name="user", max_length=16, unique=True)
+    password = models.CharField(verbose_name="password", max_length=128)
+    email = models.EmailField(verbose_name="email", max_length=64)
     
     def save(self, *args, **kwargs):
         if not self.password.startswith('pbkdf2_'):

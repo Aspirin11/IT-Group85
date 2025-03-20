@@ -86,20 +86,6 @@ DATABASES = {
     }
 }
 
-# Mysql数据库配置
-# DATABASES = {'default':
-#              {
-#             'ENGINE': 'django.db.backends.mysql',
-#               'NAME': 'your_database_name',
-#                 'USER': 'your_mysql_user',
-#                 'PASSWORD': 'your_mysql_password',
-#                 'HOST': 'localhost',
-#                 'PORT': '3306',
-#                 }
-#     }
-
-# Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -146,19 +132,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LANGUAGE_CODE = 'zh-hans'
 
-# 换成自己Logo链接
 SIMPLEUI_LOGO ='https://ps.ssl.qhimg.com/t019d46d269c46c25e9.jpg'
 
 SIMPLEUI_HOME_INFO = False
 
 
-SIMPLEUI_HOME_ACTION = False # 去掉"最近动作"
+SIMPLEUI_HOME_ACTION = False
 
 
 SIMPLEUI_CONFIG = {
     'system_keep': True,
-    'menu_display': ['首页','可视化','用户管理'],      # 开启排序和过滤功能, 不填此字段为默认排序和全部显示, 空列表[] 为全部不显示.
-    'dynamic': True,  # 设置是否开启动态菜单, 默认为False. 如果开启, 则会在每次用户登陆时动态展示菜单内容
+    'menu_display': ['首页','可视化','用户管理'],
+    'dynamic': True,
     'menus': [
         {
             'name': '可视化',

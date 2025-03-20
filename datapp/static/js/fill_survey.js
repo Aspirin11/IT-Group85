@@ -1,9 +1,9 @@
 document.getElementById('survey-form').addEventListener('submit', function(event) {
-    let isValid = true; // 标志表单是否有效
-    const requiredQuestions = document.querySelectorAll('[data-required="1"]'); // 查找所有必填项
+    let isValid = true;
+    const requiredQuestions = document.querySelectorAll('[data-required="1"]');
 
     requiredQuestions.forEach(question => {
-        const inputs = question.querySelectorAll('input, textarea'); // 查找输入项
+        const inputs = question.querySelectorAll('input, textarea');
         const isAnswered = Array.from(inputs).some(input => {
             if (input.type === 'radio' || input.type === 'checkbox') {
                 return input.checked;
@@ -12,23 +12,23 @@ document.getElementById('survey-form').addEventListener('submit', function(event
             }
         });
 
-        const errorMessage = question.querySelector('.error-message'); // 获取错误信息元素
+        const errorMessage = question.querySelector('.error-message');
 
         if (!isAnswered) {
             isValid = false;
-            question.classList.add('border', 'border-danger'); // 高亮未填写的问题
+            question.classList.add('border', 'border-danger');
             if (errorMessage) {
-                errorMessage.style.visibility = 'visible'; // 显示错误消息
+                errorMessage.style.visibility = 'visible';
             }
         } else {
-            question.classList.remove('border', 'border-danger'); // 移除高亮
+            question.classList.remove('border', 'border-danger');
             if (errorMessage) {
-                errorMessage.style.visibility = 'hidden'; // 隐藏错误消息
+                errorMessage.style.visibility = 'hidden';
             }
         }
     });
 
     if (!isValid) {
-        event.preventDefault(); // 阻止表单提交
+        event.preventDefault();
     }
 });
